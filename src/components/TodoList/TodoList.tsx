@@ -12,14 +12,20 @@ export const TodoList = ({ todos, onToggleTodo, onDeleteTodo }: Props) => (
     <h1 className="mb-6 text-3xl font-bold text-black">Todo List</h1>
 
     <ul>
-      {todos.map(todo => (
-        <Todo
-          key={todo.id}
-          todo={todo}
-          onToggleTodo={onToggleTodo}
-          onDeleteTodo={onDeleteTodo}
-        />
-      ))}
+      {todos.length > 0 ? (
+        todos.map(todo => (
+          <Todo
+            key={todo.id}
+            todo={todo}
+            onToggleTodo={onToggleTodo}
+            onDeleteTodo={onDeleteTodo}
+          />
+        ))
+      ) : (
+        <p className="my-4 text-lg font-medium text-gray-500">
+          No todos found.
+        </p>
+      )}
     </ul>
   </>
 )

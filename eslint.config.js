@@ -13,7 +13,7 @@ export default tseslint.config(
     extends: [
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
-      prettierConfig,
+      prettierConfig
     ],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -23,14 +23,14 @@ export default tseslint.config(
       parserOptions: {
         project: './tsconfig.json',
         sourceType: 'module',
-        ecmaVersion: 2020,
-      },
+        ecmaVersion: 2020
+      }
     },
 
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
-      prettier: prettier,
+      prettier: prettier
     },
     rules: {
       '@typescript-eslint/await-thenable': 'error',
@@ -38,14 +38,15 @@ export default tseslint.config(
       'react-hooks/exhaustive-deps': [
         'warn',
         {
-          additionalHooks: '(useRecoilCallback|useRecoilTransaction_UNSTABLE)',
-        },
+          additionalHooks:
+            '(useRecoilCallback|useRecoilTransaction_UNSTABLE)'
+        }
       ],
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true }
       ],
-      'prettier/prettier': 'error',
-    },
+      'prettier/prettier': 'error'
+    }
   }
 )

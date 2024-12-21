@@ -12,9 +12,12 @@ type Props = {
 export const Todo = ({
   todo: { id, text, completed },
   onToggleTodo,
-  onDeleteTodo,
+  onDeleteTodo
 }: Props) => (
-  <li className="group flex items-center gap-4 border-b border-gray-200 py-4 first:border-t">
+  <li
+    className="group flex items-center gap-4 border-b border-gray-200 py-4 first:border-t"
+    data-testid="todo"
+  >
     <input
       type="checkbox"
       id={`todo-checkbox-${id}`}
@@ -32,7 +35,7 @@ export const Todo = ({
         'flex h-6 min-h-6 w-6 min-w-6 cursor-pointer items-center justify-center rounded-full border-2',
         {
           'border-purple-500': !completed,
-          'border-green-500 bg-green-500': completed,
+          'border-green-500 bg-green-500': completed
         }
       )}
       onKeyDown={e => {
@@ -41,6 +44,7 @@ export const Todo = ({
           onToggleTodo(id)
         }
       }}
+      data-testid="todo-icon"
     />
 
     <div className="flex flex-1 items-center justify-between">
@@ -49,9 +53,10 @@ export const Todo = ({
         className={clsx(
           'cursor-pointer overflow-hidden text-ellipsis break-all text-lg font-medium text-gray-800',
           {
-            'line-through': completed,
+            'line-through': completed
           }
         )}
+        data-testid="todo-text"
       >
         {text}
       </label>
@@ -59,6 +64,7 @@ export const Todo = ({
       <XCircleIcon
         className="hidden size-6 cursor-pointer text-red-500 group-hover:block"
         onClick={() => onDeleteTodo(id)}
+        data-testid="todo-delete"
       />
     </div>
   </li>

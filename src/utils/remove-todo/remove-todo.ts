@@ -1,4 +1,4 @@
-import type { TodoItem } from '../types'
+import type { TodoItem } from '../../types'
 
 export const removeTodo = (todos: TodoItem[], id: string): TodoItem[] => {
   if (!id) return todos

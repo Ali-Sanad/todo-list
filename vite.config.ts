@@ -7,10 +7,11 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: {
-    minify: 'esbuild',
+    cssMinify: 'esbuild',
+    minify: 'esbuild'
   },
   server: {
-    port: 3000,
+    port: 3000
   },
   test: {
     globals: true,
@@ -18,6 +19,6 @@ export default defineConfig({
     setupFiles: ['./src/vitest.setup.ts'],
     css: true,
     testTimeout: 5000,
-    reporters: ['verbose'],
-  },
+    reporters: ['verbose']
+  }
 })

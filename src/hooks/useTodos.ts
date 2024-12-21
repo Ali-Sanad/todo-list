@@ -5,8 +5,8 @@ import { todosState } from '../state/atoms/todosState'
 import { todoState } from '../state/atoms/todoState'
 
 import { addTodo } from '../utils/add-todo/add-todo'
-import { removeTodo } from '../utils/remove-todo'
-import { toggleTodo } from '../utils/toggle-todo'
+import { removeTodo } from '../utils/remove-todo/remove-todo'
+import { toggleTodo } from '../utils/toggle-todo/toggle-todo'
 
 export const useTodos = () => {
   const [newTodo, setNewTodo] = useRecoilState(todoState)
@@ -35,6 +35,6 @@ export const useTodos = () => {
     handleAddTodo,
     handleToggleTodo,
     handleDeleteTodo,
-    handleTodoChange,
+    handleTodoChange
   }
 }

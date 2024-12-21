@@ -23,3 +23,32 @@
 #### 4. **TypeScript**
 
 - TypeScript is used to ensure type safety and improve the developer experience by providing better tooling, autocompletion, and error checking.
+
+#### 5. **NX**
+
+- NX is used for managing and scaling the project. It helps with running tasks such as building, linting, testing, and serving the application.
+
+#### 6. **React Testing Library (RTL) & Vitest**
+
+#### 7. **Pnpm, Vite, ESlint, Prettier, and Husky (pre-commit hook)**
+
+### Usage
+
+- Clone the repo
+- Install the dependencies
+
+```
+pnpm install
+```
+
+- Run the application locally
+
+```
+pnpm dev
+```
+
+- Run the test suits
+
+```
+pnpm test
+```

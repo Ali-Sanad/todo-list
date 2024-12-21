@@ -9,7 +9,7 @@ export const App = () => {
     handleAddTodo,
     handleToggleTodo,
     handleDeleteTodo,
-    handleTodoChange,
+    handleTodoChange
   } = useTodos()
 
   return (

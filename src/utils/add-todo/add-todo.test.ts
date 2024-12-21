@@ -3,13 +3,13 @@ import { expect, it, describe, vi } from 'vitest'
 import { addTodo } from './add-todo'
 
 vi.mock('uuid', () => ({
-  v4: vi.fn(() => 'mocked-uuid'),
+  v4: vi.fn(() => 'mocked-uuid')
 }))
 
 describe('addTodo', () => {
   it('adds a new todo item to the list', () => {
     const todos = [
-      { id: 'existing-uuid', text: 'Existing Todo', completed: false },
+      { id: 'existing-uuid', text: 'Existing Todo', completed: false }
     ]
     const newTodo = 'New Todo'
 
@@ -24,7 +24,7 @@ describe('addTodo', () => {
   describe('when newTodo is empty or whitespace', () => {
     it('does not add a todo', () => {
       const todos = [
-        { id: 'existing-uuid', text: 'Existing Todo', completed: false },
+        { id: 'existing-uuid', text: 'Existing Todo', completed: false }
       ]
       const newTodo = '    '
 
@@ -36,7 +36,7 @@ describe('addTodo', () => {
 
   it('calls uuidv4 to generate an id', () => {
     const todos = [
-      { id: 'existing-uuid', text: 'Existing Todo', completed: false },
+      { id: 'existing-uuid', text: 'Existing Todo', completed: false }
     ]
     const newTodo = 'Another Todo'
 
