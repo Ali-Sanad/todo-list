@@ -1,5 +1,11 @@
 ## Todo List Application
 
+### Layout
+
+|Mobile|Desktop|
+|------|----------|
+|![Screenshot 2024-12-21 181339](https://github.com/user-attachments/assets/a7d198bf-050b-4654-bc08-f77fbfa1a99a)|![Screenshot 2024-12-21 181405](https://github.com/user-attachments/assets/c9a54590-9273-4a61-a34c-88d46d142179)|
+
 ### Features
 
 - Add, remove, and toggle completion of todos.
