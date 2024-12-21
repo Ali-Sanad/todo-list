@@ -9,12 +9,12 @@ export const App = () => {
     handleAddTodo,
     handleToggleTodo,
     handleDeleteTodo,
-    handleTodoChange
+    handleTodoChange,
   } = useTodos()
 
   return (
-    <div className='w-full min-h-screen min-w-[310px] bg-white p-4 md:p-8 font-mono'>
-      <div className='max-w-4xl mx-auto mt-20'>
+    <div className="min-h-screen w-full min-w-[310px] bg-white p-4 font-mono md:p-8">
+      <div className="mx-auto mt-20 max-w-4xl">
         <TodoList
           todos={todos}
           onToggleTodo={handleToggleTodo}

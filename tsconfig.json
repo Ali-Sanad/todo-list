@@ -15,8 +15,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo"
+    "tsBuildInfoFile": "./dist/tsconfig.tsbuildinfo",
+    "types": ["vite/client", "vitest"],
+    "typeRoots": ["./node_modules/@types", "./node_modules/.pnpm"]
   },
-  "include": ["src", "vite.config.ts"],
+  "include": ["src", "vite.config.ts", "src/vitest.setup.ts"],
   "exclude": ["node_modules", "dist"]
 }

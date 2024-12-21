@@ -12,27 +12,27 @@ type Props = {
 export const Todo = ({
   todo: { id, text, completed },
   onToggleTodo,
-  onDeleteTodo
+  onDeleteTodo,
 }: Props) => (
-  <li className='flex items-center py-4 border-b border-gray-200 gap-4 group first:border-t'>
+  <li className="group flex items-center gap-4 border-b border-gray-200 py-4 first:border-t">
     <input
-      type='checkbox'
+      type="checkbox"
       id={`todo-checkbox-${id}`}
       checked={completed}
       onChange={() => onToggleTodo(id)}
-      className='hidden'
+      className="hidden"
     />
 
     <label
       htmlFor={`todo-checkbox-${id}`}
-      role='checkbox'
+      role="checkbox"
       aria-checked={completed ? 'true' : 'false'}
       tabIndex={0}
       className={clsx(
-        'w-6 h-6 min-h-6 min-w-6 flex items-center justify-center rounded-full border-2 cursor-pointer',
+        'flex h-6 min-h-6 w-6 min-w-6 cursor-pointer items-center justify-center rounded-full border-2',
         {
-          'border-purple-500 ': !completed,
-          'bg-green-500 border-green-500': completed
+          'border-purple-500': !completed,
+          'border-green-500 bg-green-500': completed,
         }
       )}
       onKeyDown={e => {
@@ -43,13 +43,13 @@ export const Todo = ({
       }}
     />
 
-    <div className='flex justify-between items-center flex-1'>
+    <div className="flex flex-1 items-center justify-between">
       <label
         htmlFor={`todo-checkbox-${id}`}
         className={clsx(
-          'text-lg text-gray-800 cursor-pointer overflow-hidden text-ellipsis break-all font-medium',
+          'cursor-pointer overflow-hidden text-ellipsis break-all text-lg font-medium text-gray-800',
           {
-            'line-through': completed
+            'line-through': completed,
           }
         )}
       >
@@ -57,7 +57,7 @@ export const Todo = ({
       </label>
 
       <XCircleIcon
-        className='size-6 text-red-500 cursor-pointer hidden group-hover:block'
+        className="hidden size-6 cursor-pointer text-red-500 group-hover:block"
         onClick={() => onDeleteTodo(id)}
       />
     </div>

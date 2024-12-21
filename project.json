@@ -1,0 +1,25 @@
+{
+  "name": "todo-list",
+  "targets": {
+    "vite:vitest": {
+      "executor": "@nx/vite:test",
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nx/vite:build",
+      "options": {}
+    },
+    "preview": {
+      "executor": "@nx/vite:preview",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": ["src/**/*.ts", "src/**/*.tsx"]
+      }
+    }
+  }
+}
