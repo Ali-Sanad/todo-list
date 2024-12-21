@@ -6,6 +6,7 @@
   "author": {
     "name": "Ali Sanad"
   },
+  "homepage": "https://ali-sanad.github.io/todo-list",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && nx vite:build",
