@@ -26,7 +26,7 @@ export const useTodos = () => {
   }
 
   const handleTodoChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setNewTodo(e.target.value.trim())
+    setNewTodo(e.target.value)
   }
 
   return {

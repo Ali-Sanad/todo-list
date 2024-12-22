@@ -6,11 +6,13 @@ export const addTodo = (
   todos: TodoItem[],
   newTodo: string
 ): TodoItem[] => {
-  if (!newTodo.trim()) return todos
+  const trimmedNewTodo = newTodo.trim()
+
+  if (!trimmedNewTodo) return todos
 
   const updatedTodos = [
     ...todos,
-    { id: uuidv4(), text: newTodo, completed: false }
+    { id: uuidv4(), text: trimmedNewTodo, completed: false }
   ]
 
   return updatedTodos
